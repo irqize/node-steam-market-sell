@@ -1,0 +1,25 @@
+{
+  "name": "steam-market-sell",
+  "version": "1.0.0",
+  "description": "simple node.js module with functions needed to sell items on steam comunity market",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/irqize/node-steam-market-sell.git"
+  },
+  "author": "irqize",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/irqize/node-steam-market-sell/issues"
+  },
+  "homepage": "https://github.com/irqize/node-steam-market-sell#readme",
+  "dependencies": {
+    "request": "^2.87.0",
+    "steam-totp": "^2.1.0",
+    "steam-tradeoffers": "^3.1.1",
+    "steamcommunity": "^3.36.2"
+  }
+}
