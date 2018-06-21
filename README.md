@@ -1,6 +1,9 @@
 # node-steam-market-sell
 simple node.js module with functions needed to sell items on steam comunity market
 
+## Usage
+Check ```example.js``` file in this repo to see how to initialize and use basic methods of this module.
+
 ## Documentation
 node-steam-tradeoffer-manager is a node.js module for managing Trade Offers within the Steam platform.
 
