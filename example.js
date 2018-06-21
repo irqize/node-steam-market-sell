@@ -1,4 +1,4 @@
-let SteamMarketSell = require('./index');
+let SteamMarketSell = require('steam-market-sell');
 
 let steamTotp = require('steam-totp');
 

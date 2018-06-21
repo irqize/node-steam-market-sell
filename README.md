@@ -1,6 +1,11 @@
 # node-steam-market-sell
 simple node.js module with functions needed to sell items on steam comunity market
 
+DISCLAIMER : Using bots is against Steam's TOS (```You may not use Cheats, automation software (bots), mods, hacks, or any other unauthorized third-party software, to modify or automate any Subscription Marketplace process.```). I do not take any responsibility for any damage that using this script may cause.
+
+## Instalation
+Just run ```npm i steam-market-sell``` inside your project's directory.
+
 ## Usage
 Check ```example.js``` file in this repo to see how to initialize and use basic methods of this module.
 
