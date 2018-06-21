@@ -49,3 +49,61 @@ Can be owned in callback in steamcommunity's ```login``` method.
 Boolean, if you want module to use startConfirmationChecker method on steamcommunity with sellInterval as an argument. However you have to pass credentials.identity_secret in options to have it working.
 
 
+## Methods
+After creating SteamMarketSell instance you have to run init method to be able to use other ones.
+### init
+Logs in to Steam and/or initializes whole module, depending on constructor options
+- callback
+### sellAllItems
+Sells all marketable items from specified game
+- useLowestPrices
+True for using lowest prices, false for median
+- callback
+Callback passes no values, listen for events to get info about sellings
+### sellItem
+Sells single item
+- assetID
+- contextID
+- price
+- callback
+    - err
+### getPrice
+- market_hash_name
+Market name of item
+- useLowestPrices
+True for using lowest prices, false for median
+- callback
+    - err
+    - price
+### loadAndProcessInventory
+Downloads and processes inventory in object which properties are ```market_hash_name``` of items which goes to array of objects with properties ```assetid``` and ```contextid```.
+- callback
+    - err
+    - processedInv
+
+
+## Events
+### 'log on'
+Triggered when whole module is ready to work
+### 'item sold'
+Triggered when item sold during ```sellAllItems``` method execution
+- sellInfo
+    - name
+    - assetid
+    - contextid
+    - price
+### 'item not sold'
+Triggered when error occured while selling item during ```sellAllItems``` method execution
+- err
+- sellInfo
+    - name
+    - assetid
+    - contextid
+    - price
+### 'loaded inventory'
+Triggered when loaded inventory during ```sellAllItems``` method execution, can be accessed by ```inv``` property of module
+
+
+## Properties
+### inv
+Inventory of account accessible after 'loaded inventory' event is triggered.
